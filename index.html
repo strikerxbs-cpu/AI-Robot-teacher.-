@@ -11,237 +11,330 @@
 
 <body>
 
-  <header class="header">
-    <div class="robot">🤖</div>
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="top-header">
+
+    <div class="robot">
+      🤖
+    </div>
 
     <div>
       <h1>AI Robo Teacher</h1>
-      <p>Learn • Practice • Quiz • Improve</p>
+      <p>Smart Learning • Smart Quiz • Smart Future</p>
     </div>
+
   </header>
 
 
-  <main>
+  <!-- =========================
+       HOME
+  ========================== -->
 
-    <!-- HOME -->
-    <section id="home" class="screen">
+  <main id="home" class="container">
 
-      <div class="welcome">
-        <h2>👋 স্বাগতম!</h2>
+    <section class="welcome-card">
 
-        <p>
-          তোমার Subject নির্বাচন করো এবং
-          AI Robo Teacher-এর সাথে Quiz শুরু করো।
-        </p>
+      <div class="big-robot">
+        🤖
       </div>
 
+      <h2>স্বাগতম শিক্ষার্থী! 👋</h2>
 
-      <h2>📚 Subject নির্বাচন করো</h2>
-
-      <div class="subjects">
-
-        <button onclick="selectSubject('বাংলা')">
-          📖<br>
-          বাংলা
-          <small>120 Questions</small>
-        </button>
-
-        <button onclick="selectSubject('ইংরেজি')">
-          🇬🇧<br>
-          ইংরেজি
-          <small>120 Questions</small>
-        </button>
-
-        <button onclick="selectSubject('গণিত')">
-          ➗<br>
-          গণিত
-          <small>120 Questions</small>
-        </button>
-
-        <button onclick="selectSubject('বিজ্ঞান')">
-          🔬<br>
-          বিজ্ঞান
-          <small>120 Questions</small>
-        </button>
-
-        <button onclick="selectSubject('ICT')">
-          💻<br>
-          ICT
-          <small>120 Questions</small>
-        </button>
-
-        <button onclick="selectSubject('বাংলাদেশ ও বিশ্বপরিচয়')">
-          🇧🇩<br>
-          বাংলাদেশ ও বিশ্বপরিচয়
-          <small>120 Questions</small>
-        </button>
-
-      </div>
+      <p>
+        আমি তোমার AI Robo Teacher।
+        আমাকে প্রশ্ন করো, উত্তর শেখো এবং
+        বড় Quiz দিয়ে নিজের জ্ঞান পরীক্ষা করো।
+      </p>
 
     </section>
 
 
-    <!-- QUIZ SETUP -->
-    <section id="setup" class="screen hidden">
+    <h2 class="section-title">
+      📚 Subject নির্বাচন করো
+    </h2>
 
-      <button class="back" onclick="goHome()">
-        ← ফিরে যাও
+
+    <div class="subjects">
+
+      <button
+        class="subject-card"
+        onclick="selectSubject('বাংলা')">
+
+        <span>📖</span>
+        <b>বাংলা</b>
+        <small>১২০টি প্রশ্ন</small>
+
       </button>
 
-      <div class="setup-box">
 
-        <div class="bigRobot">🤖</div>
+      <button
+        class="subject-card"
+        onclick="selectSubject('ইংরেজি')">
 
-        <h2 id="selectedSubject">
-          Subject
-        </h2>
+        <span>🔤</span>
+        <b>ইংরেজি</b>
+        <small>১২০টি প্রশ্ন</small>
 
-        <p>
-          কতটি প্রশ্নের Quiz দিতে চাও?
-        </p>
-
-        <select id="questionCount">
-
-          <option value="10">
-            10 Questions
-          </option>
-
-          <option value="20">
-            20 Questions
-          </option>
-
-          <option value="30">
-            30 Questions
-          </option>
-
-          <option value="50">
-            50 Questions
-          </option>
-
-          <option value="100">
-            100 Questions
-          </option>
-
-          <option value="120">
-            120 Questions
-          </option>
-
-        </select>
-
-        <button
-          class="startButton"
-          onclick="startQuiz()">
-
-          🚀 Quiz শুরু করো
-
-        </button>
-
-      </div>
-
-    </section>
+      </button>
 
 
-    <!-- QUIZ -->
-    <section id="quiz" class="screen hidden">
+      <button
+        class="subject-card"
+        onclick="selectSubject('গণিত')">
 
-      <div class="quizTop">
+        <span>🧮</span>
+        <b>গণিত</b>
+        <small>১২০টি প্রশ্ন</small>
 
-        <span id="questionNumber">
-          প্রশ্ন 1 / 120
-        </span>
-
-        <span id="score">
-          Score: 0
-        </span>
-
-      </div>
+      </button>
 
 
-      <div class="progress">
+      <button
+        class="subject-card"
+        onclick="selectSubject('বিজ্ঞান')">
 
-        <div
-          id="progressBar">
-        </div>
+        <span>🔬</span>
+        <b>বিজ্ঞান</b>
+        <small>১২০টি প্রশ্ন</small>
 
-      </div>
-
-
-      <div class="questionBox">
-
-        <div class="robotSmall">
-          🤖
-        </div>
-
-        <h2 id="question">
-          প্রশ্ন এখানে আসবে
-        </h2>
-
-      </div>
+      </button>
 
 
-      <div id="options">
+      <button
+        class="subject-card"
+        onclick="selectSubject('ICT')">
 
-        <!-- Options will appear here -->
+        <span>💻</span>
+        <b>ICT</b>
+        <small>১২০টি প্রশ্ন</small>
 
-      </div>
-
-
-      <div id="feedback">
-
-      </div>
-
-    </section>
+      </button>
 
 
-    <!-- RESULT -->
-    <section id="result" class="screen hidden">
+      <button
+        class="subject-card"
+        onclick="selectSubject('বাংলাদেশ ও বিশ্বপরিচয়')">
 
-      <div class="resultBox">
+        <span>🌍</span>
+        <b>বাংলাদেশ ও বিশ্বপরিচয়</b>
+        <small>১২০টি প্রশ্ন</small>
 
-        <div class="resultRobot">
-          🏆
-        </div>
+      </button>
 
-        <h2>
-          Quiz শেষ!
-        </h2>
-
-        <div
-          id="percentage"
-          class="percentage">
-
-          0%
-
-        </div>
-
-        <p id="resultText">
-
-          ফলাফল এখানে দেখা যাবে।
-
-        </p>
-
-        <button
-          class="startButton"
-          onclick="restartQuiz()">
-
-          🔄 আবার খেলো
-
-        </button>
-
-        <button
-          class="homeButton"
-          onclick="goHome()">
-
-          🏠 Home
-
-        </button>
-
-      </div>
-
-    </section>
+    </div>
 
   </main>
 
+
+  <!-- =========================
+       QUIZ SETUP
+  ========================== -->
+
+  <section
+    id="setup"
+    class="container hidden">
+
+    <button
+      class="back-button"
+      onclick="goHome()">
+
+      ← Subject পরিবর্তন
+
+    </button>
+
+
+    <div class="setup-card">
+
+      <div class="setup-robot">
+        🤖
+      </div>
+
+      <h2 id="selectedSubject">
+        বাংলা
+      </h2>
+
+      <p>
+        কতটি প্রশ্নের Quiz দিতে চাও?
+      </p>
+
+
+      <select id="questionCount">
+
+        <option value="10">
+          ১০টি প্রশ্ন
+        </option>
+
+        <option value="20">
+          ২০টি প্রশ্ন
+        </option>
+
+        <option value="30">
+          ৩০টি প্রশ্ন
+        </option>
+
+        <option value="50">
+          ৫০টি প্রশ্ন
+        </option>
+
+        <option value="80">
+          ৮০টি প্রশ্ন
+        </option>
+
+        <option value="100">
+          ১০০টি প্রশ্ন
+        </option>
+
+        <option value="120" selected>
+          ১২০টি প্রশ্ন
+        </option>
+
+      </select>
+
+
+      <button
+        class="start-button"
+        onclick="startQuiz()">
+
+        🚀 Quiz শুরু করো
+
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       QUIZ
+  ========================== -->
+
+  <section
+    id="quiz"
+    class="container hidden">
+
+
+    <div class="quiz-top">
+
+      <span id="questionNumber">
+        প্রশ্ন ১ / ১২০
+      </span>
+
+      <span id="score">
+        Score: 0
+      </span>
+
+    </div>
+
+
+    <div class="progress-container">
+
+      <div
+        id="progressBar"
+        class="progress-bar">
+      </div>
+
+    </div>
+
+
+    <div class="quiz-card">
+
+      <div class="question-icon">
+        🤖
+      </div>
+
+      <h2 id="question">
+        প্রশ্ন এখানে আসবে
+      </h2>
+
+
+      <div
+        id="options"
+        class="options">
+
+      </div>
+
+
+      <div
+        id="feedback"
+        class="feedback">
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       RESULT
+  ========================== -->
+
+  <section
+    id="result"
+    class="container hidden">
+
+
+    <div class="result-card">
+
+      <div class="result-robot">
+        🤖🎉
+      </div>
+
+      <h1>
+        Quiz শেষ! 🎉
+      </h1>
+
+      <p>
+        তোমার ফলাফল
+      </p>
+
+
+      <div
+        id="percentage"
+        class="percentage">
+
+        0%
+
+      </div>
+
+
+      <p
+        id="resultText"
+        class="result-text">
+
+        ফলাফল এখানে আসবে
+
+      </p>
+
+
+      <button
+        class="start-button"
+        onclick="restartQuiz()">
+
+        🔄 আবার Quiz দাও
+
+      </button>
+
+
+      <button
+        class="home-button"
+        onclick="goHome()">
+
+        🏠 Home
+
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
@@ -249,14 +342,18 @@
       🤖 AI Robo Teacher
     </p>
 
-    <p>
-      AI Horizon Project
-    </p>
+    <small>
+      Smart Learning Project
+    </small>
 
   </footer>
 
 
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
   <script src="script.js"></script>
 
 </body>
-          </html>
+</html>     
