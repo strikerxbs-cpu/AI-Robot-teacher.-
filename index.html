@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI Robo Teacher</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="robot">🤖</div>
+
+    <div>
+      <h1>AI Robo Teacher</h1>
+      <p>Learn • Practice • Quiz • Improve</p>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="screen">
+
+      <div class="welcome">
+        <h2>👋 স্বাগতম!</h2>
+
+        <p>
+          তোমার Subject নির্বাচন করো এবং
+          AI Robo Teacher-এর সাথে Quiz শুরু করো।
+        </p>
+      </div>
+
+
+      <h2>📚 Subject নির্বাচন করো</h2>
+
+      <div class="subjects">
+
+        <button onclick="selectSubject('বাংলা')">
+          📖<br>
+          বাংলা
+          <small>120 Questions</small>
+        </button>
+
+        <button onclick="selectSubject('ইংরেজি')">
+          🇬🇧<br>
+          ইংরেজি
+          <small>120 Questions</small>
+        </button>
+
+        <button onclick="selectSubject('গণিত')">
+          ➗<br>
+          গণিত
+          <small>120 Questions</small>
+        </button>
+
+        <button onclick="selectSubject('বিজ্ঞান')">
+          🔬<br>
+          বিজ্ঞান
+          <small>120 Questions</small>
+        </button>
+
+        <button onclick="selectSubject('ICT')">
+          💻<br>
+          ICT
+          <small>120 Questions</small>
+        </button>
+
+        <button onclick="selectSubject('বাংলাদেশ ও বিশ্বপরিচয়')">
+          🇧🇩<br>
+          বাংলাদেশ ও বিশ্বপরিচয়
+          <small>120 Questions</small>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUIZ SETUP -->
+    <section id="setup" class="screen hidden">
+
+      <button class="back" onclick="goHome()">
+        ← ফিরে যাও
+      </button>
+
+      <div class="setup-box">
+
+        <div class="bigRobot">🤖</div>
+
+        <h2 id="selectedSubject">
+          Subject
+        </h2>
+
+        <p>
+          কতটি প্রশ্নের Quiz দিতে চাও?
+        </p>
+
+        <select id="questionCount">
+
+          <option value="10">
+            10 Questions
+          </option>
+
+          <option value="20">
+            20 Questions
+          </option>
+
+          <option value="30">
+            30 Questions
+          </option>
+
+          <option value="50">
+            50 Questions
+          </option>
+
+          <option value="100">
+            100 Questions
+          </option>
+
+          <option value="120">
+            120 Questions
+          </option>
+
+        </select>
+
+        <button
+          class="startButton"
+          onclick="startQuiz()">
+
+          🚀 Quiz শুরু করো
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUIZ -->
+    <section id="quiz" class="screen hidden">
+
+      <div class="quizTop">
+
+        <span id="questionNumber">
+          প্রশ্ন 1 / 120
+        </span>
+
+        <span id="score">
+          Score: 0
+        </span>
+
+      </div>
+
+
+      <div class="progress">
+
+        <div
+          id="progressBar">
+        </div>
+
+      </div>
+
+
+      <div class="questionBox">
+
+        <div class="robotSmall">
+          🤖
+        </div>
+
+        <h2 id="question">
+          প্রশ্ন এখানে আসবে
+        </h2>
+
+      </div>
+
+
+      <div id="options">
+
+        <!-- Options will appear here -->
+
+      </div>
+
+
+      <div id="feedback">
+
+      </div>
+
+    </section>
+
+
+    <!-- RESULT -->
+    <section id="result" class="screen hidden">
+
+      <div class="resultBox">
+
+        <div class="resultRobot">
+          🏆
+        </div>
+
+        <h2>
+          Quiz শেষ!
+        </h2>
+
+        <div
+          id="percentage"
+          class="percentage">
+
+          0%
+
+        </div>
+
+        <p id="resultText">
+
+          ফলাফল এখানে দেখা যাবে।
+
+        </p>
+
+        <button
+          class="startButton"
+          onclick="restartQuiz()">
+
+          🔄 আবার খেলো
+
+        </button>
+
+        <button
+          class="homeButton"
+          onclick="goHome()">
+
+          🏠 Home
+
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      🤖 AI Robo Teacher
+    </p>
+
+    <p>
+      AI Horizon Project
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+          </html>
