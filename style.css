@@ -1,84 +1,67 @@
+/* =========================================
+   🤖 AI ROBO TEACHER
+   FINAL STYLE.CSS
+========================================= */
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, "Noto Sans Bengali", sans-serif;
-  background: linear-gradient(135deg, #eef7ff, #f7efff);
-  color: #172033;
   min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc, #e0f2fe);
+  color: #172033;
 }
 
 
-/* =========================
+/* =========================================
    HEADER
-========================= */
+========================================= */
 
-.header {
+.top-header {
+  width: 100%;
+  padding: 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 15px;
-
-  padding: 20px;
-
-  background: linear-gradient(
-    135deg,
-    #4f46e5,
-    #7c3aed,
-    #2563eb
-  );
-
+  background: linear-gradient(135deg, #4f46e5, #7c3aed, #2563eb);
   color: white;
-
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
 .robot {
-  font-size: 55px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
 }
 
-.header h1 {
+.top-header h1 {
   font-size: 28px;
   margin-bottom: 4px;
 }
 
-.header p {
-  font-size: 14px;
+.top-header p {
+  font-size: 13px;
   opacity: 0.9;
 }
 
 
-/* =========================
-   MAIN
-========================= */
+/* =========================================
+   CONTAINER
+========================================= */
 
-main {
-  width: 100%;
-  max-width: 800px;
-
-  margin: auto;
-
-  padding: 20px;
-}
-
-
-/* =========================
-   SCREEN
-========================= */
-
-.screen {
-  background: white;
-
-  border-radius: 25px;
-
-  padding: 22px;
-
-  margin-top: 10px;
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.08);
+.container {
+  width: min(950px, 94%);
+  margin: 25px auto;
 }
 
 .hidden {
@@ -86,513 +69,487 @@ main {
 }
 
 
-/* =========================
+/* =========================================
    WELCOME
-========================= */
+========================================= */
 
-.welcome {
-  background: linear-gradient(
-    135deg,
-    #eef2ff,
-    #f5f3ff
-  );
-
-  border-radius: 20px;
-
-  padding: 20px;
-
-  margin-bottom: 25px;
+.welcome-card {
+  background: white;
+  border-radius: 25px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
 }
 
-.welcome h2 {
-  margin-bottom: 8px;
+.big-robot {
+  font-size: 75px;
+  margin-bottom: 10px;
+  animation: floatRobot 3s ease-in-out infinite;
 }
 
-.welcome p {
-  color: #667085;
-  line-height: 1.6;
+@keyframes floatRobot {
+
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+}
+
+.welcome-card h2 {
+  color: #4f46e5;
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.welcome-card p {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+  color: #64748b;
 }
 
 
-/* =========================
-   SUBJECTS
-========================= */
+/* =========================================
+   SUBJECT
+========================================= */
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
 
 .subjects {
   display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 15px;
-
-  margin-top: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
 }
 
-.subjects button {
+.subject-card {
   border: none;
-
-  border-radius: 20px;
-
-  padding: 20px 10px;
-
-  background: #f4f6fb;
-
-  color: #172033;
-
-  font-size: 20px;
-
-  font-weight: bold;
-
-  cursor: pointer;
-
-  transition: 0.25s;
-}
-
-.subjects button:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 8px 20px rgba(79, 70, 229, 0.18);
-
-  background: #eef0ff;
-}
-
-.subjects small {
-  display: block;
-
-  margin-top: 8px;
-
-  font-size: 12px;
-
-  color: #667085;
-
-  font-weight: normal;
-}
-
-
-/* =========================
-   BACK BUTTON
-========================= */
-
-.back {
-  border: none;
-
-  background: transparent;
-
-  color: #4f46e5;
-
-  font-size: 16px;
-
-  font-weight: bold;
-
-  cursor: pointer;
-
-  padding: 5px;
-}
-
-
-/* =========================
-   SETUP
-========================= */
-
-.setup-box {
-  text-align: center;
-
-  padding: 20px;
-}
-
-.bigRobot {
-  font-size: 75px;
-
-  margin-bottom: 10px;
-}
-
-.setup-box h2 {
-  font-size: 25px;
-
-  margin-bottom: 10px;
-}
-
-.setup-box p {
-  color: #667085;
-
-  margin-bottom: 10px;
-}
-
-
-/* =========================
-   SELECT
-========================= */
-
-select {
-  width: 100%;
-
-  padding: 14px;
-
-  border-radius: 14px;
-
-  border: 1px solid #d8deea;
-
   background: white;
-
-  font-size: 16px;
-
-  margin-top: 8px;
-
-  outline: none;
-}
-
-select:focus {
-  border-color: #4f46e5;
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-.startButton,
-.homeButton {
-  width: 100%;
-
-  border: none;
-
-  border-radius: 15px;
-
-  padding: 14px;
-
-  margin-top: 12px;
-
-  font-size: 17px;
-
-  font-weight: bold;
-
+  padding: 25px 15px;
+  border-radius: 20px;
   cursor: pointer;
-
-  transition: 0.2s;
-}
-
-.startButton {
-  background: linear-gradient(
-    135deg,
-    #4f46e5,
-    #7c3aed
-  );
-
-  color: white;
-}
-
-.startButton:hover {
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 7px 20px rgba(79, 70, 229, 0.3);
-}
-
-.homeButton {
-  background: #eef0f6;
-
-  color: #172033;
-}
-
-
-/* =========================
-   QUIZ TOP
-========================= */
-
-.quizTop {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+  transition: 0.25s;
   display: flex;
-
-  justify-content: space-between;
-
+  flex-direction: column;
   align-items: center;
+  gap: 7px;
+}
 
+.subject-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.13);
+}
+
+.subject-card:active {
+  transform: scale(0.96);
+}
+
+.subject-card span {
+  font-size: 42px;
+}
+
+.subject-card b {
+  font-size: 18px;
+  color: #312e81;
+}
+
+.subject-card small {
+  color: #64748b;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+  border: none;
+  background: white;
+  padding: 11px 17px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #4f46e5;
   font-weight: bold;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+}
 
+
+/* =========================================
+   SETUP
+========================================= */
+
+.setup-card {
+  background: white;
+  border-radius: 25px;
+  padding: 40px 25px;
+  text-align: center;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.09);
+}
+
+.setup-robot {
+  font-size: 65px;
   margin-bottom: 10px;
 }
 
+.setup-card h2 {
+  font-size: 28px;
+  color: #4f46e5;
+  margin-bottom: 10px;
+}
 
-/* =========================
-   PROGRESS BAR
-========================= */
-
-.progress {
-  width: 100%;
-
-  height: 10px;
-
-  background: #e9edf5;
-
-  border-radius: 20px;
-
-  overflow: hidden;
-
+.setup-card p {
+  color: #64748b;
   margin-bottom: 20px;
 }
 
-#progressBar {
-  height: 100%;
+#questionCount {
+  width: 100%;
+  max-width: 350px;
+  padding: 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 20px;
+}
 
-  width: 0%;
 
-  background: linear-gradient(
-    90deg,
-    #4f46e5,
-    #7c3aed
-  );
+/* =========================================
+   BUTTONS
+========================================= */
 
+.start-button {
+  border: none;
+  padding: 14px 25px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(79,70,229,0.3);
+  transition: 0.2s;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+}
+
+.start-button:active {
+  transform: scale(0.96);
+}
+
+.home-button {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 12px auto 0;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  background: #e2e8f0;
+  color: #334155;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   QUIZ TOP
+========================================= */
+
+.quiz-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 18px;
+  border-radius: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  font-weight: bold;
+}
+
+#questionNumber {
+  color: #4f46e5;
+}
+
+#score {
+  color: #059669;
+}
+
+
+/* =========================================
+   PROGRESS BAR
+========================================= */
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background: #e2e8f0;
   border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
 
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4f46e5, #7c3aed);
+  border-radius: 20px;
   transition: width 0.3s;
 }
 
 
-/* =========================
-   QUESTION BOX
-========================= */
+/* =========================================
+   QUIZ CARD
+========================================= */
 
-.questionBox {
-  background: linear-gradient(
-    135deg,
-    #f4f6ff,
-    #faf5ff
-  );
-
-  border-radius: 20px;
-
-  padding: 20px;
-
-  margin-bottom: 15px;
+.quiz-card {
+  background: white;
+  border-radius: 25px;
+  padding: 30px 22px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
 }
 
-.robotSmall {
-  font-size: 35px;
-
-  margin-bottom: 8px;
+.question-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  font-size: 34px;
 }
 
 #question {
+  text-align: center;
+  line-height: 1.7;
   font-size: 21px;
-
-  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #1e293b;
 }
 
 
-/* =========================
-   ANSWER OPTIONS
-========================= */
+/* =========================================
+   OPTIONS
+========================================= */
 
-#options {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 10px;
+.options {
+  display: grid;
+  gap: 12px;
 }
 
 .option {
   width: 100%;
-
-  padding: 15px;
-
-  border-radius: 15px;
-
-  border: 2px solid #e6e9f0;
-
-  background: #f8f9fc;
-
-  color: #172033;
-
+  padding: 16px;
   text-align: left;
-
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  background: #f8fafc;
+  color: #1e293b;
   font-size: 16px;
-
   cursor: pointer;
-
   transition: 0.2s;
 }
 
-.option:hover {
-  background: #eef0ff;
-
-  border-color: #818cf8;
+.option:hover:not(:disabled) {
+  border-color: #6366f1;
+  background: #eef2ff;
+  transform: translateX(3px);
 }
 
 .option:disabled {
   cursor: default;
 }
 
-
-/* =========================
-   CORRECT / WRONG
-========================= */
-
 .option.correct {
   background: #dcfce7;
-
   border-color: #22c55e;
-
   color: #166534;
+  font-weight: bold;
 }
 
 .option.wrong {
   background: #fee2e2;
-
   border-color: #ef4444;
-
   color: #991b1b;
-}
-
-
-/* =========================
-   FEEDBACK
-========================= */
-
-#feedback {
-  text-align: center;
-
-  min-height: 35px;
-
-  padding-top: 12px;
-
-  font-size: 16px;
-
   font-weight: bold;
 }
 
 
-/* =========================
-   RESULT
-========================= */
+/* =========================================
+   FEEDBACK
+========================================= */
 
-.resultBox {
+.feedback {
   text-align: center;
-
-  padding: 20px;
+  min-height: 28px;
+  margin-top: 18px;
+  font-size: 17px;
+  font-weight: bold;
 }
 
-.resultRobot {
-  font-size: 80px;
 
+/* =========================================
+   RESULT
+========================================= */
+
+.result-card {
+  background: white;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 40px 25px;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+.result-robot {
+  font-size: 70px;
   margin-bottom: 10px;
 }
 
-.resultBox h2 {
-  font-size: 28px;
+.result-card h1 {
+  color: #4f46e5;
+  margin-bottom: 8px;
+}
 
-  margin-bottom: 10px;
+.result-card p {
+  color: #64748b;
 }
 
 .percentage {
-  font-size: 65px;
-
-  font-weight: 900;
-
-  color: #4f46e5;
-
-  margin: 10px 0;
+  font-size: 55px;
+  font-weight: bold;
+  color: #059669;
+  margin: 20px 0;
 }
 
-#resultText {
-  color: #667085;
-
-  font-size: 16px;
-
-  margin-bottom: 10px;
-
-  line-height: 1.7;
+.result-text {
+  white-space: pre-line;
+  line-height: 1.8;
+  margin-bottom: 25px;
 }
 
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer {
   text-align: center;
+  padding: 25px 15px;
+  color: #64748b;
+  margin-top: 30px;
+}
 
-  padding: 20px;
-
-  color: #667085;
-
-  font-size: 13px;
+footer p {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 
-/* =========================
+/* =========================================
    MOBILE
-========================= */
+========================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
-  main {
-    padding: 12px;
-  }
-
-  .header {
-    padding: 15px;
+  .top-header {
+    padding: 16px;
   }
 
   .robot {
-    font-size: 45px;
+    width: 52px;
+    height: 52px;
+    font-size: 30px;
   }
 
-  .header h1 {
-    font-size: 23px;
+  .top-header h1 {
+    font-size: 21px;
+  }
+
+  .top-header p {
+    font-size: 11px;
   }
 
   .subjects {
-    grid-template-columns: 1fr 1fr;
-
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
-  .subjects button {
-    padding: 16px 5px;
-
-    font-size: 17px;
+  .subject-card {
+    padding: 20px 8px;
   }
 
-  .screen {
-    padding: 16px;
+  .subject-card span {
+    font-size: 35px;
+  }
 
-    border-radius: 20px;
+  .subject-card b {
+    font-size: 15px;
+  }
+
+  .subject-card small {
+    font-size: 11px;
+  }
+
+  .welcome-card {
+    padding: 25px 16px;
+  }
+
+  .big-robot {
+    font-size: 60px;
   }
 
   #question {
     font-size: 18px;
   }
 
-  .option {
-    font-size: 15px;
-
-    padding: 13px;
-  }
-
-  .percentage {
-    font-size: 55px;
+  .quiz-card {
+    padding: 25px 15px;
   }
 
 }
 
 
-/* =========================
-   EXTRA SMALL PHONE
-========================= */
+/* =========================================
+   SMALL PHONE
+========================================= */
 
 @media (max-width: 380px) {
 
   .subjects {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .header h1 {
-    font-size: 20px;
+  .subject-card {
+    min-height: 130px;
   }
 
-  .robot {
-    font-size: 40px;
+  .quiz-top {
+    font-size: 13px;
   }
 
+  .option {
+    padding: 14px 12px;
+    font-size: 14px;
   }
+
+}m
